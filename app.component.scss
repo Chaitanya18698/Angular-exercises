@@ -1,0 +1,66 @@
+.button:hover,
+.button:focus {
+    
+    border: 1px solid #1ea1ff;
+    background: #ffffff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff));
+    background: -moz-linear-gradient(top, #ffffff, #ffffff);
+    background: linear-gradient(to bottom, #ffffff, #ffffff);
+    color: #1691f0;
+    text-decoration: none;
+}
+.button:active {
+    background: #999999;
+    background: -webkit-gradient(linear, left top, left bottom, from(#999999), to(#fffcfc));
+    background: -moz-linear-gradient(top, #999999, #fffcfc);
+    background: linear-gradient(to bottom, #999999, #fffcfc);
+}
+.button:before{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 30px;
+    width: 24px;
+    line-height: 24px;
+    margin: 0 4px -6px -4px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    
+    background-size: 100% 100%;
+}
+.button1:hover,
+.button1:focus {
+    border: 1px solid #1ea1ff;
+    background: blue;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff));
+    background: -moz-linear-gradient(top, #ffffff, #ffffff);
+    background: linear-gradient(to bottom, #ffffff, #ffffff);
+    color: #1691f0;
+    text-decoration: none;
+}
+.button1:active {
+    background: #999999;
+    background: -webkit-gradient(linear, left top, left bottom, from(#999999), to(#fffcfc));
+    background: -moz-linear-gradient(top, #999999, #fffcfc);
+    background: linear-gradient(to bottom, #999999, #fffcfc);
+}
+.button1:before{
+    content:  "\0000a0";
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    margin: 0 4px -6px -4px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-size: 100% 100%;
+}
+.all{
+    background-color: skyblue;
+    display:inline-block;
+    height:300px;
+    width: 400px;
+    border-radius: 20px;
+
+}
