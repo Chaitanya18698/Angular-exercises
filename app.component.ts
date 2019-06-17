@@ -1,25 +1,56 @@
 import { Component } from '@angular/core';
-
+import { item } from './app.interface';
+import { citem } from './app.interface';
+// import { privateEncrypt } from 'crypto';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Exercise 1';
-  amount:number=200;
-  isDisabled:string="";
+  title = 'exe6';
+  amount:number=0;
+  items:item[]=[
+    {
+  
+      Iname:'item1',
+      price:200,
+      amount:0
+    },
+    {
+  
+      Iname:'item2',
+      price:300,
+      amount:0
+    },
+    {
+  
+      Iname:'item3',
+      price:400,
+      amount:0
+    }
+  ]
+  citems:citem[]=[
 
-
-handleIncrementClick(event:any)
+  ]
+addcart(id:any)
 {
-  this.amount=this.amount+10;
+    this.citems.push(this.items[id]);
+    
+    this.amount=this.amount+this.items[id].price;
 }
-handleDecrementClick(event:any){
-  if(this.amount==10)
-  this.isDisabled="disabled"
-  this.amount=this.amount-10;
+remove(item:any,n:number)
+{
+  console.log(item);
+  item.price
+  this.citems.splice(n,1);
+  // if(this.citems.length==0)
+  // {
+  //     this.amount=0;
+  // }
+  // else
+  this.amount=this.amount-item.price;
 }
 
-}
 
+}
