@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<!-- <div style="text-align:center"> -->
+<div  style="text-align:center">
   <!-- <h1>
     Welcome to {{ title }}!
   </h1>
@@ -17,38 +17,33 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul> -->
-<div class="all"></div>
-<h1 style="text-align: center">Store</h1>
-<h2>Catalog</h2>
-<table class="tabl" border="1" align="center" >
-  <tbody *ngFor="let item of items let i=index">
-  <tr><td>Item {{i}}
-    
-  <pre>      {{item.Iname}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button (click)="addcart(i)">Add to cart</button>
-        {{item.price}}</pre>
-  </td>
-</tr>
-  </tbody>
-</table>
-<table border="1" class="tabl2">
-    <tr><h3>Cart</h3></tr>
-<tbody *ngFor="let citem of citems let n=index">
-    <tr><td>Item
-    <pre>      {{citem.Iname}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button (click)="remove(citem,n)">Remove</button>
-          {{citem.price}}</pre>
-    </td>
-    </tr>
-    </tbody>
-  </table>
-<table align="right" border="1" class="tabl3">
+<div class="all">
+<h1> Movies</h1>
+Search<input type="text" name="search" (input)="bttn($event)">
+<button (click)="search($event)">Go</button><br><br>
+<table class="tabl"  border="1" align="center">
+
+  <tr>
+    <th><h1>Title</h1></th>
+    <th><h1>Rating</h1></th>
+    <th><h1>Description</h1></th>
+    <th><h1>Poster</h1></th>
+   </tr>
   
-    <tr ><h3>Checkout</h3></tr>
-        <tr><td>Item
-        <pre>Order Total:{{amount}}</pre>
-        
-        
-        <tr><button>Place order</button></tr>
-        </td>
+    <tbody *ngFor="let m of moviess">
+
+  <tr >
+    <td><h1>{{m.title}}</h1></td>
+    <td><h1>{{m.rating}}</h1></td>
+    <td><h1>{{m.description}}</h1></td>
+    <td><a href={{m.cover_url}} style="display:block"></a></td>
+    <a href="{{m.cover_url}}" style="display:block"></a>
+  </tr>
+
+  </tbody>
+
 </table>
-<!-- </div> -->
+
+</div>
+</div>
 <router-outlet></router-outlet>
